@@ -7,10 +7,10 @@ terraform {
   }
   required_version = ">= 1.0.4"
   cloud {
-    organization = "aws-poc-cloud"
+    organization = "AWS_Terraform_Demo_Org"
 
     workspaces {
-      name = "aws-terraformcloud-github-poc"
+      name = "AWS_Terraform_Workspace"
     }
   }
 }
@@ -56,9 +56,9 @@ resource "aws_instance" "app_server" {
 }
 
 data "aws_security_group" "selected" {
-  name = "launch-wizard-1"
+  name = "launch-wizard-4"
 }
 
 data "aws_key_pair" "example" {
-  key_name           = "AWS"
+  key_name           = "aws_pipeline_key_pair"
 }
